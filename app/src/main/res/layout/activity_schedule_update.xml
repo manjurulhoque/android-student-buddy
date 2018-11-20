@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/daySpinnerUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10sp" />
+
+        <Spinner
+            android:id="@+id/itemSpinnerUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/daySpinnerUpdate"
+            android:layout_gravity="fill"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2sp" />
+
+        <EditText
+            android:id="@+id/subjectTextViewUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/itemSpinnerUpdate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Subject" />
+
+        <TimePicker
+            android:id="@+id/timePickerUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@id/subjectTextViewUpdate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePickerUpdate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4sp"
+            android:text="Update"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</ScrollView>

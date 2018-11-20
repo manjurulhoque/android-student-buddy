@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CalculatorActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:editable="false"
+        android:gravity="end"
+        android:textAlignment="textEnd" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText"
+        android:editable="false"
+        android:gravity="end"
+        android:textAlignment="textEnd" />
+
+    <Button
+        android:id="@+id/square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText2"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/square"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/xpowy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/square"
+        android:layout_toEndOf="@+id/square"
+        android:layout_toRightOf="@+id/square"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/xpown"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/xpowy"
+        android:layout_toEndOf="@+id/xpowy"
+        android:layout_toRightOf="@+id/xpowy"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="log"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/sin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/square"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/sin"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/cos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sin"
+        android:layout_alignLeft="@+id/xpowy"
+        android:layout_alignStart="@+id/xpowy"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/cos"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/tan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cos"
+        android:layout_toEndOf="@+id/cos"
+        android:layout_toRightOf="@+id/cos"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/tan"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sin"
+        android:layout_toLeftOf="@+id/cos"
+        android:layout_toStartOf="@+id/cos"
+        android:background="@drawable/calc_btn"
+        android:checked="false"
+        android:onClick="onClick"
+        android:text="1/X" />
+
+    <Button
+        android:id="@+id/factorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/inverse"
+        android:layout_toEndOf="@+id/inverse"
+        android:layout_toRightOf="@+id/inverse"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/factorial"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/sqrt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/factorial"
+        android:layout_toEndOf="@+id/factorial"
+        android:layout_toRightOf="@+id/factorial"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/sqrt"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tan"
+        android:layout_toEndOf="@+id/log"
+        android:layout_toRightOf="@+id/log"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/clear" />
+
+    <Button
+        android:id="@+id/backSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sqrt"
+        android:layout_toEndOf="@+id/tan"
+        android:layout_toRightOf="@+id/tan"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/backspace" />
+
+    <Button
+        android:id="@+id/pi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sqrt"
+        android:layout_alignLeft="@+id/backSpace"
+        android:layout_alignStart="@+id/backSpace"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/pi"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/num7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inverse"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/num8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num7"
+        android:layout_toEndOf="@+id/num7"
+        android:layout_toRightOf="@+id/num7"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/num9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num8"
+        android:layout_toEndOf="@+id/num8"
+        android:layout_toRightOf="@+id/num8"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/num4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/num7"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/num5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num4"
+        android:layout_alignLeft="@+id/num8"
+        android:layout_alignStart="@+id/num8"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/num6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num5"
+        android:layout_toEndOf="@+id/num5"
+        android:layout_toRightOf="@+id/num5"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/num4"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num1"
+        android:layout_alignLeft="@+id/num5"
+        android:layout_alignStart="@+id/num5"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num2"
+        android:layout_toEndOf="@+id/num2"
+        android:layout_toRightOf="@+id/num2"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/posneg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/num1"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/posneg"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/num0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/posneg"
+        android:layout_toEndOf="@+id/posneg"
+        android:layout_toRightOf="@+id/posneg"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/num0"
+        android:layout_toEndOf="@+id/num0"
+        android:layout_toRightOf="@+id/num0"
+        android:background="@drawable/calc_btn"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onClick"
+        android:text="."
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/num6"
+        android:layout_toEndOf="@+id/num9"
+        android:layout_toRightOf="@+id/num9"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="@string/divide" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/num3"
+        android:layout_alignLeft="@+id/divide"
+        android:layout_alignStart="@+id/divide"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="x" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dot"
+        android:layout_alignLeft="@+id/multiply"
+        android:layout_alignStart="@+id/multiply"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="-"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dot"
+        android:layout_alignLeft="@+id/minus"
+        android:layout_alignStart="@+id/minus"
+        android:background="@drawable/calc_btn"
+        android:onClick="onClick"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/equal"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/plus"
+        android:onClick="onClick"
+        android:text="=" />
+
+</RelativeLayout>

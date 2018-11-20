@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:padding="20dp"
+                android:text="Semester"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:padding="20dp"
+                android:paddingEnd="50dp"
+                android:text="Credit"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:padding="20dp"
+                android:paddingEnd="50dp"
+                android:text="Cgpa"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutOne"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="semester 1"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditOne"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaOne"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleTwo"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 2"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditTwo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaTwo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleThree"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 3"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditThree"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaThree"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleFour"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 4"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditFour"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaFour"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleFive"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 5"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditFive"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaFive"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleSix"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 6"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditSix"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaSix"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleEight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleSeven"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 7"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditSeven"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaSeven"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleNine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleEight"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 8"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditEight"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaEight"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleNine"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 9"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditNine"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaNine"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleEleven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleTen"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 10"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditTen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaTen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleTwelve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleEleven"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 11"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditEleven"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaEleven"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSingleThirteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleTwelve"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:editable="false"
+                android:hint="Semester 12"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditTwelve"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/sgpaTwelve"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:gravity="center"
+                android:hint="@string/sgpa"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutSingleTwo"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/newSemesterButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#2196f3"
+                android:text="@string/add_semester"
+                android:textAllCaps="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayoutLast"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/calculateCgpaButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#1769aa"
+                android:text="@string/calculate"
+                android:textAllCaps="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
